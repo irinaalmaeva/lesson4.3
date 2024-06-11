@@ -75,7 +75,15 @@ class Zoo:
 
 
 
+zoo = Zoo()
 
+bird = Bird("Глаша", 2)
+cat = Cat("Мурзик", 3)
+serpent = Serpent("Скоропея", 4)
+
+zoo.add_animal(Bird)
+zoo.add_animal(Cat)
+zoo.add_animal(Serpent)
 
 
 
