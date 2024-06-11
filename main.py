@@ -45,6 +45,17 @@ class Serpent(Animal):
     def eat(self):
      print("Ест мышей")
 
+
+class ZooKeeper:
+    def __init__(self, name):
+        self.name = name
+
+    def feed_animal(self, animal):
+        print(f"{self.name} кормит {animal.name}")
+
+
+
+
 animals = [Bird("Глаша", 2), Cat("Мурзик", 3), Serpent("Скоропея", 4)]
 
 for animal in animals:
