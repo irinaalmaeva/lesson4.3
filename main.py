@@ -53,6 +53,13 @@ class ZooKeeper:
     def feed_animal(self, animal):
         print(f"{self.name} кормит {animal.name}")
 
+class Veterinarian:
+    def __init__(self, name):
+        self.name = name
+
+    def heal_animal(self, animal):
+        print(f"{self.name} лечит {animal.name}")
+
 
 
 
