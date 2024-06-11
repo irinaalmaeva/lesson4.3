@@ -67,12 +67,14 @@ class Zoo:
 
     def add_animal(self, animal):
         self.animals.append(animal)
-        print(f"добавлено животное{animal.name} , возраст {animal.age} года")
+        print(f"добавлено животное {animal.name} , возраст {animal.age} года")
 
     def add_employee(self, employee):
         self.employees.append(employee)
         print(f"добавлен сотрудник {employee.name}")
 
+    def __repr__(self):
+        return f"Зоопарк с {len(self.employees)} сотрудниками и {len(self.animals)} животными"
 
 
 zoo = Zoo()
@@ -81,15 +83,27 @@ bird = Bird("Глаша", 2)
 cat = Cat("Мурзик", 3)
 serpent = Serpent("Скоропея", 4)
 
-zoo.add_animal(Bird)
-zoo.add_animal(Cat)
-zoo.add_animal(Serpent)
+zoo.add_animal(bird)
+zoo.add_animal(cat)
+zoo.add_animal(serpent)
+
+zookeeper = ZooKeeper("Иван Сергеевич")
+veterinarian = Veterinarian("Павел Семенович")
+
+zoo.add_employee(zookeeper)
+zoo.add_employee(veterinarian)
+
+zookeeper.feed_animal(bird)
+veterinarian.heal_animal(cat)
 
 
+print(zoo)
 
-animals = [Bird("Глаша", 2), Cat("Мурзик", 3), Serpent("Скоропея", 4)]
-
-for animal in animals:
+# Выводим информацию о животных и демонстрируем их действия
+for animal in zoo.animals:
     print(f"{animal.name}, возраст {animal.age} года")
     animal.make_sound()
     animal.eat()
+
+
+
