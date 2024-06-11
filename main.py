@@ -13,7 +13,6 @@
 #5. Создайте классы для сотрудников, например, `ZooKeeper`, `Veterinarian`, которые могут иметь специфические методы
  # (например, `feed_animal()` для `ZooKeeper` и `heal_animal()` для `Veterinarian`).
 
-
 class Animal():
     def __init__(self, name, age):
         self.name = name
@@ -33,7 +32,6 @@ class Bird(Animal):
         print("Ест зерно")
 
 class Cat(Animal):
-
     def make_sound(self):
         print("Мур-Мур")
 
@@ -41,9 +39,15 @@ class Cat(Animal):
      print("Ест молоко")
 
 class Serpent(Animal):
-
     def make_sound(self):
         print("Ши-Ши")
 
     def eat(self):
      print("Ест мышей")
+
+animals = [Bird("Глаша", 2), Cat("Мурзик", 3), Serpent("Скоропея", 4)]
+
+for animal in animals:
+    print(f"{animal.name}, возраст {animal.age} года")
+    animal.make_sound()
+    animal.eat()
