@@ -60,6 +60,22 @@ class Veterinarian:
     def heal_animal(self, animal):
         print(f"{self.name} лечит {animal.name}")
 
+class Zoo:
+    def __init__(self):
+        self.animals = []
+        self.employees = []
+
+    def add_animal(self, animal):
+        self.animals.append(animal)
+        print(f"добавлено животное{animal.name} , возраст {animal.age} года")
+
+    def add_employee(self, employee):
+        self.employees.append(employee)
+        print(f"добавлен сотрудник {employee.name}")
+
+
+
+
 
 
 
